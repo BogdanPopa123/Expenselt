@@ -125,5 +125,8 @@
   <ItemGroup>
     <Resource Include="watermark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VadimBecali.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
