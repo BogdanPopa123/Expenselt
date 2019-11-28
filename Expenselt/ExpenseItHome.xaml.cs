@@ -33,8 +33,7 @@ namespace Expenselt
         
         private void Print(object sender, SelectionChangedEventArgs args) 
         {
-            
-            TextBox1.Text = this.peopleListBox.SelectedItem.ToString();
+            this.NamePreview.Content = "Selected: " + ((System.Xml.XmlNode)this.peopleListBox.SelectedItem).Attributes["Name"].Value;
         }
     }
 
