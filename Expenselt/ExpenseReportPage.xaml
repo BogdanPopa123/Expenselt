@@ -59,7 +59,7 @@
             <!-- Name -->
             <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Name:</Label>
-                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
+                <Label Name="nameLabel" Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
             </StackPanel>
             
                
@@ -67,7 +67,7 @@
             <!-- Department -->
             <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Department:</Label>
-                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Department}"></Label>
+                <Label Name="departmentLabel" Style="{StaticResource labelStyle}" Content="{Binding XPath=@Department}"></Label>
             </StackPanel>
 
             <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 

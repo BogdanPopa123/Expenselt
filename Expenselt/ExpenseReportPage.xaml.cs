@@ -27,8 +27,15 @@ namespace Expenselt
         // Custom constructor to pass expense report data
         public ExpenseReportPage(object data) : this()
         {
-            // Bind to expense report data.
-            this.DataContext = data;
+            // Datele primite sunt transformate in PersonModel
+            PersonModel person = (PersonModel)data;
+
+
+            //Definim datele care vor fi afisate.
+            nameLabel.Content = person.FirstName;
+            departmentLabel.Content = person.Department;
         }
+
+        
     }
 }
