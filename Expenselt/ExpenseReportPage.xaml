@@ -9,7 +9,7 @@
       Title="ExpenseIt - View Expense">
 
     <Grid>
-        
+
         <!--Templates to display expense report data-->
         <Grid.Resources>
             <!-- Reason item template -->
@@ -21,7 +21,7 @@
                 <Label Content="{Binding XPath=@ExpenseAmount}"/>
             </DataTemplate>
         </Grid.Resources>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="VadimBecali.jpg" />
         </Grid.Background>
@@ -59,15 +59,15 @@
             <!-- Name -->
             <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Name:</Label>
-                <Label Name="nameLabel" Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
             </StackPanel>
-            
-               
+
+
 
             <!-- Department -->
             <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Department:</Label>
-                <Label Name="departmentLabel" Style="{StaticResource labelStyle}" Content="{Binding XPath=@Department}"></Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Department}"></Label>
             </StackPanel>
 
             <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 

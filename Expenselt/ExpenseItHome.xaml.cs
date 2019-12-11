@@ -20,37 +20,25 @@ namespace Expenselt
     /// </summary>
     public partial class ExpenseItHome : Page
     {
-        List<PersonModel> people;
         public ExpenseItHome()
         {
             InitializeComponent();
-
-            //Populez lista de persone cu datele din baza de date.
-
-            people = DataAccess.GetPeople();
-
-            //Setez sursa de data pentru peopleListBox
-
-            peopleListBox.ItemsSource = people;
-
-            //Definesc membrul afisast (FirstName,LastName... )
-
-            peopleListBox.DisplayMemberPath = "FirstName";
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //View expense roport
             ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
-            
         }
-        
-        private void Print(object sender, SelectionChangedEventArgs args) 
+
+
+        private void Print(object sender, SelectionChangedEventArgs args)
         {
-            this.NamePreview.Content = "Selected: " + ((System.Xml.XmlNode)this.peopleListBox.SelectedItem).Attributes["Name"].Value;
+            this.NamePreview.Content =  ((System.Xml.XmlNode)this.peopleListBox.SelectedItem).Attributes["Name"].Value;
+
         }
     }
 
-        
-    
+
+
 }

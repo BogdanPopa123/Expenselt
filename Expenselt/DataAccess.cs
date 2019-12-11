@@ -16,7 +16,8 @@ namespace Expenselt
         {
             using (IDbConnection connection = new SqlConnection("Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt;Integrated Security=True"))
             {
-                return connection.Query<PersonModel>("select * from [dbo].[ExpenseIt];").ToList();
+                var output = connection.Query<PersonModel>("select * from [dbo].[ExpenseIt];").ToList();
+                return output;
                 
             }
         }

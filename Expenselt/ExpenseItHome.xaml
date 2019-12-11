@@ -15,8 +15,8 @@
             <DataTemplate x:Key="nameItemTemplate">
                 <Label Content="{Binding XPath=@Name}"/>
             </DataTemplate>
-            
-            
+
+
 
             <!-- Expense Report Data -->
             <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
@@ -60,7 +60,7 @@
             <RowDefinition />
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-     
+
         <!-- People list -->
 
         <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >
@@ -70,16 +70,21 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
+
         <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" SelectionChanged="Print" SelectionMode="Single"
                  ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
                  ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 
         <!-- View report button -->
+
         <Button Grid.Column="1" Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}">View</Button>
         
-        <!-- IMPORTANT RAU DE TOT-->
+        
+        <!-- IMPORTANT AU DE TOT -->
+      
         <Label Grid.Column="0" Grid.Row="1" Style="{StaticResource headerTextStyle}" Name="NamePreview" Content=""/>
+
 
     </Grid>
 </Page>
