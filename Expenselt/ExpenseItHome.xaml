@@ -44,6 +44,8 @@
                 </x:XData>
             </XmlDataProvider>
         </Grid.Resources>
+        
+        
 
         <Grid.Background>
             <ImageBrush ImageSource="VadimBecali.jpg"  />

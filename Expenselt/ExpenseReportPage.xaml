@@ -84,11 +84,11 @@
                     </DataTemplate>
                 </Grid.Resources>
                 <!-- Expense type and Amount table -->
-                <DataGrid ItemsSource="{Binding XPath=Expense}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
+                <DataGrid ItemsSource="{Binding XPath=FirstName}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
 
                     <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="ExpenseType" CellTemplate="{StaticResource typeItemTemplate}" />
-                        <DataGridTemplateColumn Header="Amount" CellTemplate="{StaticResource amountItemTemplate}" />
+                        <DataGridTextColumn Header="ExpenseType"  />
+                        <DataGridTextColumn Header="Amount" x:Name="idData" />
                     </DataGrid.Columns>
 
                 </DataGrid>

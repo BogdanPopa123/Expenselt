@@ -14,11 +14,10 @@ namespace Expenselt
     {
         public static List<PersonModel> GetPeople()
         {
-            using (IDbConnection connection = new SqlConnection("Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt;Integrated Security=True"))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt2;Integrated Security=True"))
             {
-                var output = connection.Query<PersonModel>("select * from [dbo].[ExpenseIt];").ToList();
+                var output = connection.Query<PersonModel>("select * from [dbo].[ExpenseIt2table];").ToList();
                 return output;
-                
             }
         }
     }

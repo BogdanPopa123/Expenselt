@@ -13,6 +13,6 @@ namespace Expenselt
     /// </summary>
     public partial class App : Application
     {
-        
+
     }
 }
