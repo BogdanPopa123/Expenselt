@@ -1,0 +1,38 @@
+1) Ce reprezinta DataBinding?
+      DataBinding reprezinta conexiunea dintre un source si un target. Cu ajutorul DataBindingului, source-ul ia valoarea pe care o are 
+targetul. Avantajul folosirii bindingului este ca de fiecare data cand updatam contentul targetului, source-ul isi va schimba si el
+contentul in mod automat, fiind acelasi cu al targetului
+
+2) Ce reprezinta ItemsSource?
+      ItemsSource reprezinta "locul" din care listboxul respectiv este populat cu date
+
+3) Ce reprezinta ItemTemplate
+      ItemTemplate reprezinta o modalitate de organizare a datelor intr-un anumit fel, dupa bunul plac al programatorului
+
+4) Ce reprezinta o clasa abstracta?
+      Clasa abstracta este o clasa la care nu se poate crea instanta de obiect, putand fi doar mostenite de alte clase extinse din ele.
+In clasele abstracte se pot afla doar metode abstracte, care se declara punand in fata "abstract"
+
+5) Ce reprezinta o clasa virtuala?
+      Cu ajutorul funcţiilor virtuale şi al polimorfismului este posibilă proiectarea şi implementarea sistemelor software care sunt
+mult mai uşor extensibile. Programele pot fi concepute să proceseze în mod generic, sub forma obiectelor din clasele de bază, 
+a obiectelor tuturor claselor dintr-o ierarhie. Clasele care nu există în timpul dezvoltării iniţiale a programului pot fi adăugate 
+ulterior cu modificări minore sau chiar fără a face modificări părţii generice a programului, atâta timp cât clasele sunt părţi
+ale ierarhiei procesate generic. Singurele părţi din program care trebuie modificate sunt cele care folosesc informaţii specifice
+despre o clasă adăugată în ierarhie.
+
+6) Ce rol are keywordul "using"?
+      Keywordul "using" are rolul de a: - defini un domeniu la sfarsitul caruia un obiect va fi dispus (aranjat)
+                                        - crea un alias pt un namespace sau de a importa anumite tipuri definite intr-un namespace
+                                        - importa membrii unei clase
+
+7) Ce reprezinta interfata IEnumerable?
+      IEnumerable creeaza un enumerator ce poate fi parcurs o singura data
+
+8) Ce reprezinta T (List <T>)?
+      T reprezinta tipul elementelor din lista respectiva
+      
+9) De ce o proprietate definita intr o clasa poate fi de forma public int varsta_medie si unde e nevoie de a definirea de forma
+public int id{ get; set; } ?
+      Avem nevoie ca o clasa sa contina proprietati publice pt a putea fi accesate din afara functiei. Avem nevoie de getter si setter
+atunci cand acestor proprietati le vor fi atribuite valori, respectiv cand vor popula anumite lucruri, precum liste
