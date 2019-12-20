@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Expenselt
 {
-    class PersonModel
+    public class PersonModel
     {
         public int id { get; set; }
         public string FirstName { get; set; }

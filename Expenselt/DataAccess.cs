@@ -10,15 +10,15 @@ using Microsoft.AspNet.SignalR.Infrastructure;
 
 namespace Expenselt
 {
-    class DataAccess
+    public class DataAccess
     {
         public static List<PersonModel> GetPeople()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt2;Integrated Security=True"))
-            {
-                var output = connection.Query<PersonModel>("select * from [dbo].[ExpenseIt2table];").ToList();
-                return output;
-            }
+            string connectionString = @"Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt2;Integrated Security=True";
+            SqlConnection db = new SqlConnection(connectionString);
+            List<PersonModel> output = db.Query<PersonModel>("Select * from [ExpenseIt2].[dbo].[ExpenseIt2table]").ToList();
+            //  output e numele variabilei careia ii dau return 
+            return output;
         }
     }
 }

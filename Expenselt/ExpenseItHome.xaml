@@ -74,8 +74,8 @@
         </Border>
 
         <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" SelectionChanged="Print" SelectionMode="Single"
-                 ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
-                 ItemTemplate="{StaticResource nameItemTemplate}">
+                 ItemsSource="{Binding Path=People, Mode=OneWay}"
+                 DisplayMemberPath="FirstName">
         </ListBox>
 
         <!-- View report button -->
