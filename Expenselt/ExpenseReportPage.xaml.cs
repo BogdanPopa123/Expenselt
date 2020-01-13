@@ -28,7 +28,9 @@ namespace Expenselt
         // Custom constructor to pass expense report data
         public ExpenseReportPage(object data) : this()
         { 
-            this.DataContext = data as PersonModel;
+           // this.DataContext = data as PersonModel;
+            DataGrid.DataContext = DataAccess.GetExpenses();
+            this.DataContext = data;
         }
     }
 }

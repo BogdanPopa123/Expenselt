@@ -100,6 +100,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="ExpenseIt.Home.xaml.cs">
       <DependentUpon>ExpenseIt.Home.xaml</DependentUpon>
@@ -107,6 +108,7 @@
     <Compile Include="ExpenseItHome.xaml.cs">
       <DependentUpon>ExpenseItHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExpenseModel.cs" />
     <Compile Include="ExpenseReportPage.xaml.cs">
       <DependentUpon>ExpenseReportPage.xaml</DependentUpon>
     </Compile>

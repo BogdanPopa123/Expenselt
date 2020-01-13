@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Expenselt
 {
-    public class PersonModel
+    class ExpenseModel
     {
-        public static int id { get; set; }
-        public string FirstName { get; set; }
-        public string Department { get; set; }
         public string ExpenseType { get; set; }
         public int ExpenseAmount { get; set; }
     }
-    
 }
