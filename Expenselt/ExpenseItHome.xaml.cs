@@ -42,8 +42,9 @@ namespace Expenselt
         {
             //View expense report
             this.DataContext = this.peopleListBox.SelectedItem;
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.DataContext);
             this.NavigationService.Navigate(expenseReportPage);
+            
 
         }
 
@@ -53,9 +54,9 @@ namespace Expenselt
             //this.NamePreview.Content =((System.Xml.XmlNode)this.peopleListBox.SelectedItem).Attributes["Name"].Value;
 
 
-            int index = this.peopleListBox.SelectedIndex;
-            PersonModel SelectedPerson = People[index];
-            this.NamePreview.Content = SelectedPerson.FirstName;
+         //   int index = this.peopleListBox.SelectedIndex;
+         //   PersonModel SelectedPerson = People[index];
+         //   this.NamePreview.Content = SelectedPerson.FirstName;
 
 
             //Variable.indexListBox = peopleListBox.SelectedIndex;
@@ -72,10 +73,7 @@ namespace Expenselt
             get { return _people; }
             set { _people = value; }
         }
-        public static class Variable
-        {
-            public static int indexListBox;
-        }
+        
 
 
     }

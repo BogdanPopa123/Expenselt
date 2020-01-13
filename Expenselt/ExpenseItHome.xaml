@@ -13,7 +13,7 @@
 
             <!-- Name item template -->
             <DataTemplate x:Key="nameItemTemplate">
-                <Label Content="{Binding XPath=@Name}"/>
+                <Label Content="{Binding Name}"/>
             </DataTemplate>
 
 

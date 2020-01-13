@@ -27,8 +27,7 @@ namespace Expenselt
         }
         // Custom constructor to pass expense report data
         public ExpenseReportPage(object data) : this()
-        {
-           
+        { 
             this.DataContext = data as PersonModel;
         }
     }
