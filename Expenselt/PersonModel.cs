@@ -11,8 +11,6 @@ namespace Expenselt
         public static int id { get; set; }
         public string FirstName { get; set; }
         public string Department { get; set; }
-        public string ExpenseType { get; set; }
-        public int ExpenseAmount { get; set; }
     }
     
 }

@@ -33,9 +33,11 @@ namespace Expenselt
         {
             string connectionString = @"Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt2;Integrated Security=True";
             SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("Select ExpenseType, ExpenseAmount, id from [ExpenseIt2].[dbo].[ExpenseIt2table] " +
+            SqlCommand cmd = new SqlCommand("Select ExpenseType, ExpenseAmount from [ExpenseIt2].[dbo].[ExpenseTable] " +
                 "where id=@index", con);
-            var index = cmd.Parameters.AddWithValue("@index", PersonModel.id);
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters["@id"].Value = PersonModel.id;
+           // var index = cmd.Parameters.AddWithValue("@index", PersonModel.id);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             var dt = new DataSet();
             ad.Fill(dt);
