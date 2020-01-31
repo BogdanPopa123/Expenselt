@@ -72,10 +72,12 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
-
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" SelectionChanged="Print" SelectionMode="Single"
-                 ItemsSource="{Binding Path=People, Mode=OneWay}"
-                 DisplayMemberPath="FirstName">
+        <!-- ItemsSource="{Binding Path=People, Mode=OneWay}"-->
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" SelectionMode="Single"
+                
+                 ItemsSource="{Binding Tables[0]}"
+                 DisplayMemberPath="FirstName"
+                 SelectionChanged="PeopleListBox_GetIndex">
         </ListBox>
 
         <!-- View report button -->

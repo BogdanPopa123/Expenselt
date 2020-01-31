@@ -8,9 +8,10 @@ namespace Expenselt
 {
     public class PersonModel
     {
-        public static int id { get; set; }
+        public static int IndexListBox { get; set; }
         public string FirstName { get; set; }
         public string Department { get; set; }
+        
     }
     
 }

@@ -10,7 +10,7 @@ using Microsoft.AspNet.SignalR.Infrastructure;
 
 namespace Expenselt
 {
-    public class DataAccess
+    class DataAccess
     {
         public static List<PersonModel> GetPeople()
         {
@@ -29,15 +29,14 @@ namespace Expenselt
         */
        
 
-        public static DataSet GetExpenses()
+        public DataSet GetExpenses()
         {
             string connectionString = @"Data Source=DESKTOP-EBUNPQL;Initial Catalog=ExpenseIt2;Integrated Security=True";
             SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("Select ExpenseType, ExpenseAmount from [ExpenseIt2].[dbo].[ExpenseTable] " +
-                "where id=@index", con);
-            cmd.Parameters.Add("@id", SqlDbType.Int);
-            cmd.Parameters["@id"].Value = PersonModel.id;
-           // var index = cmd.Parameters.AddWithValue("@index", PersonModel.id);
+            SqlCommand cmd = new SqlCommand("Select id, ExpenseType, ExpenseAmount from [ExpenseIt2].[dbo].[ExpenseTable] where id = @index", con);
+
+            var index = cmd.Parameters.AddWithValue("@index", PersonModel.IndexListBox);
+            // problema static vs instanta
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             var dt = new DataSet();
             ad.Fill(dt);

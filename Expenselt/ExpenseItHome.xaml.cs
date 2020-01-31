@@ -21,7 +21,7 @@ namespace Expenselt
     /// </summary>
     public partial class ExpenseItHome : Page
     {
-        private List<PersonModel> people;
+        public List<PersonModel> people;
 
         public ExpenseItHome()
         {
@@ -29,22 +29,26 @@ namespace Expenselt
 
             //  people = DataAccess.GetPeople();
 
-            //  peopleListBox.ItemsSource = people;
+            
             People = DataAccess.GetPeople();
+            peopleListBox.ItemsSource = People;
+            //var MyProperties = new { People = People };
 
-            var MyProperties = new { People = People };
-
-            this.DataContext = MyProperties;
+            //this.DataContext = MyProperties;
 
 
+        }
+        private void PeopleListBox_GetIndex(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = this.peopleListBox.SelectedItem;
+            PersonModel.IndexListBox = peopleListBox.SelectedIndex;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //View expense report
-            this.DataContext = this.peopleListBox.SelectedItem;
+            
             ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.DataContext);
             this.NavigationService.Navigate(expenseReportPage);
-            
 
         }
 
@@ -64,17 +68,16 @@ namespace Expenselt
             
            
         }
+        private List<PersonModel> People;
 
-
+/*
         private List<PersonModel> _people;
 
-        public List<PersonModel> People
+        private List<PersonModel> People;
         {
             get { return _people; }
             set { _people = value; }
-        }
-        
-
+        }*/
 
     }
 }
